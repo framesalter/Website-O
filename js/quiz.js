@@ -11,6 +11,13 @@ const state = {
 
 const $ = (id) => document.getElementById(id);
 
+function getGivensForCard(card) {
+  if (state.mode === "default" && card.defaultGivens) {
+    return card.defaultGivens;
+  }
+  return state.givens;
+}
+
 function loadSettings() {
   try {
     const raw = localStorage.getItem("sat.settings");
@@ -141,7 +148,7 @@ function showPanel(id) {
 // ---------- Render one card ----------
 function renderCard() {
   const card = state.session.cards[state.session.current];
-  const g = state.givens;
+  const g = getGivensForCard(card);
   state.session.locked = false;
 
   $("progress-text").textContent = `Card ${state.session.current + 1} of ${state.session.cards.length}`;
@@ -250,7 +257,7 @@ function renderCard() {
 function checkCard() {
   if (state.session.locked) return;
   const card = state.session.cards[state.session.current];
-  const g = state.givens;
+  const g = getGivensForCard(card);
 
   const results = {};
   card.subQuestions.forEach((sq) => {
