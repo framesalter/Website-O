@@ -20,13 +20,20 @@
   <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
   <header class="topbar">
-    <a href="index.html" class="brand">Home</a>
-    <nav>
+  <a href="index.html" class="brand">Home</a>
+  <div class="topbar-right">
+    <nav class="nav-drawer">
       <a href="activity.html">Activity</a>
       <a href="sample.html">Sample Problems</a>
       <a href="credits.html">Credits</a>
     </nav>
-  </header>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <main id="app">
     <section id="setup" class="panel activity-setup">
@@ -129,6 +136,7 @@
     </section>
   </main>
 
+  <script src="js/nav.js" defer></script>
   <script type="module" src="js/quiz.js"></script>
   <script src="js/particles.js" defer></script>
 </body>

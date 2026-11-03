@@ -18,15 +18,22 @@
   <div id="blackhole" aria-hidden="true"></div>
   <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-  <header class="topbar">
-    <a href="index.html" class="brand">Home</a>
-    <nav>
+ <header class="topbar">
+  <a href="index.html" class="brand">Home</a>
+  <div class="topbar-right">
+    <nav class="nav-drawer">
       <a href="activity.html">Activity</a>
       <a href="sample.html">Sample Problems</a>
       <a href="credits.html">Credits</a>
       <a href="playground.html">Playground</a>
     </nav>
-  </header>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <main class="sample-page">
 
@@ -524,6 +531,7 @@
     });
   </script>
 
+  <script src="js/nav.js" defer></script>
   <script src="js/particles.js" defer></script>
 
 </body>

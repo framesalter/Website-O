@@ -19,12 +19,19 @@
 
 <header class="topbar">
   <a href="index.html" class="brand">Home</a>
-  <nav>
-    <a href="activity.html">Activity</a>
-    <a href="sample.html">Sample Problems</a>
-    <a href="credits.html">Credits</a>
-    <a href="playground.html">Playground</a>
-  </nav>
+  <div class="topbar-right">
+    <nav class="nav-drawer">
+      <a href="activity.html">Activity</a>
+      <a href="sample.html">Sample Problems</a>
+      <a href="credits.html">Credits</a>
+      <a href="playground.html">Playground</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </header>
 
 <main class="game-page">
@@ -46,6 +53,7 @@
   </div>
 </main>
 
+<script src="js/nav.js" defer></script>
 <script type="module" src="js/games/feed-blackhole.js"></script>
 <script src="js/particles.js" defer></script>
 </body>
